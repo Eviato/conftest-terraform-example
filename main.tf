@@ -19,17 +19,17 @@ resource "azurerm_resource_group" "this" {
 }
 
 locals {
-    sta = {
-        "storage_account_1" = {
-            replication = "GRS"
-        },
-        "storage_account_2" = {
-            replication = "GRS"
-        },
-        "storage_account_3" = {
-            replication = "GRS"
-        },
-    }
+  sta = {
+    "storage_account_1" = {
+      replication = "GRS"
+    },
+    "storage_account_2" = {
+      replication = "GRS"
+    },
+    "storage_account_3" = {
+      replication = "GRS"
+    },
+  }
 }
 
 resource "azurerm_storage_account" "these" {

@@ -1,0 +1,20 @@
+---
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v3.4.0
+    hooks:
+      - id: check-added-large-files
+      - id: end-of-file-fixer
+      - id: forbid-new-submodules
+      - id: trailing-whitespace
+  - repo: https://github.com/antonbabenko/pre-commit-terraform
+    rev: v1.50.0
+    hooks:
+      - id: terraform_fmt
+      - id: terraform_validate
+      - id: terraform_tflint
+  - repo: https://github.com/anderseknert/pre-commit-opa
+    rev: v1.5.1
+    hooks:
+      - id: conftest-verify
+        args: ['--policy', 'policy']
